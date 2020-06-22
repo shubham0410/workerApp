@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { userActions } from "../../actions/user.actions";
+import { userActions } from "actions/user.actions";
 import FacebookLogin from "react-facebook-login";
 import GoogleLogin from "react-google-login";
 import CircularProgress from "@material-ui/core/CircularProgress";

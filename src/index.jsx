@@ -12,6 +12,10 @@ import "assets/scss/argon-design-system-react.scss?v1.1.0";
 // setup fake backend
 import { configureFakeBackend } from './helpers/fake-backend';
 configureFakeBackend();
+const styleLink = document.createElement("link");
+styleLink.rel = "stylesheet";
+styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
+document.head.appendChild(styleLink);
 
 render(
   <Provider store={store}>

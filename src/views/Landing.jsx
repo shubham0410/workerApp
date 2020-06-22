@@ -3,7 +3,7 @@ import React from "react";
 import classnames from "classnames";
 import Typist from "react-typist";
 import { connect } from "react-redux";
-import { commonActions } from "../../actions";
+import { commonActions } from "actions";
 import TypistLoop from "react-typist-loop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 // reactstrap components
@@ -28,7 +28,7 @@ import { DemoNavbar } from "components/Navbars/DemoNavbar.jsx";
 import CardsFooter from "components/Footers/CardsFooter.js";
 
 // index page sections
-import Download from "IndexSections/Download.js";
+import Download from "views/IndexSections/Download.js";
 
 class Landing extends React.Component {
   constructor(props) {
@@ -94,19 +94,19 @@ class Landing extends React.Component {
                   <Row>
                     <Col lg="6">
                       <h1 className="display-3 text-white">
-                        One Stop Solution{" "}
-                        <span>for all your tax and compliiance needs.</span>
+                      lorem ipsum
+                        <span> lorem ipsum lorem ipsum lorem ipsum lorem ipsum.</span>
                       </h1>
                       <p className="lead text-white">
-                        We help companies and individuals by providing the
-                        quality and affordable services through internet. We
-                        need to add one or two more lines here.
+                      lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                      lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                      lorem ipsum lorem ipsum lorem ipsum
                       </p>
                       <TypistLoop interval={1000}>
                         {[
-                          "GST-Registration",
-                          "Company Registration",
-                          "Income Tax",
+                          "lorem ipsum",
+                          "lorem ipsum",
+                          "lorem ipsum",
                         ].map((text) => (
                           <Typist
                             className="lead text-white"
@@ -127,7 +127,7 @@ class Landing extends React.Component {
                             <i className="fa fa-code" />
                           </span>
                           <span className="btn-inner--text">
-                            Request a Callback
+                            Become a Partner
                           </span>
                         </Button>
                         <Button

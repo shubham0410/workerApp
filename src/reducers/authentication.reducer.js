@@ -1,5 +1,7 @@
 import { userConstants } from '../constants';
-
+import { isConstTypeReference } from 'typescript';
+console.log(localStorage.getItem('user'));
+console.log(JSON.stringify(localStorage.getItem('user')));
 let user = JSON.parse(localStorage.getItem('user'));
 const initialState = user ? { loggedIn: true, user } : {loggedIn: false};
 

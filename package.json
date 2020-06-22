@@ -70,10 +70,12 @@
     "react-typist": "^2.0.5",
     "react-typist-loop": "^0.0.5",
     "@material-ui/core": "^4.10.0",
-    "semantic-ui-react": "^0.88.2"
+    "semantic-ui-react": "^0.88.2",
+    "firebase": "6.0.2"
   },
   "devDependencies": {
     "@types/googlemaps": "3.39.2",
+    "@types/firebase": "^3.2.1",
     "@types/markerclustererplus": "2.1.33",
     "@types/react": "16.9.19",
     "eslint-plugin-flowtype": "3.13.0",

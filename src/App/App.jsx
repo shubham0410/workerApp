@@ -4,11 +4,12 @@ import { connect } from 'react-redux';
 
 import { history } from '../helpers';
 import { alertActions } from '../actions/alert.actions';
-import {Landing} from "views/examples/Landing.jsx";
-import {Login} from "views/examples/Login.jsx";
-import Profile from "views/examples/Profile.jsx";
-import {Register} from "views/examples/Register.jsx";
-import Services from "views/examples/Services.jsx";
+import {Landing} from "views/Landing.jsx";
+import {Login} from "views/Login.jsx";
+import {Home} from "views/Home.jsx";
+import Profile from "views/Profile.jsx";
+import {Register} from "views/Register.jsx";
+import Services from "views/Services.jsx";
 import Index from "views/Index.js";
 
 
@@ -26,7 +27,7 @@ class App extends React.Component {
             <div>
                         <Router history={history}>
                             <Switch>
-                                <Route path="/" exact render={props => <Landing {...props} />} />} />
+                                <Route path="/" exact render={props => <Home {...props} />} />} />
                                 <Route
                                     path="/landing-page"
                                     exact
@@ -50,6 +51,10 @@ class App extends React.Component {
                                 <Route
                                     path="/all"
                                     render={props => <Index {...props} />}
+                                />
+                                 <Route
+                                    path="/home"
+                                    render={props => <Home {...props} />}
                                 />
                             </Switch>
                         </Router>

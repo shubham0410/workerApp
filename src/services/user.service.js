@@ -1,6 +1,6 @@
 //import config from 'config';
 import { authHeader } from '../helpers';
-
+import {auth, createUserProfileDocument} from '../firebase-utils.js';
 export const userService = {
     login,
     logout,
@@ -52,12 +52,30 @@ function getById(id) {
 }
 
 function register(user) {
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(user)
-    };
-    return fetch(`http://localhost:3000/users/register`, requestOptions).then(handleResponse);
+    console.log("registering user"+user)
+     const name = user.name
+    // const {users} = await auth.createUserWithEmailAndPassword(
+    //     user.email,
+    //     user.password
+    //   ).catch(function(error) {
+    //     // Handle Errors here.
+    //     var errorCode = error.code;
+    //     var errorMessage = error.message;
+    //     if (errorCode == 'auth/weak-password') {
+    //       alert('The password is too weak.');
+    //     } else {
+    //       alert(errorMessage);
+    //     }
+    //     console.log(error);
+    //   });
+    createUserProfileDocument(user, { name });
+    console.log("created user");
+    // const requestOptions = {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(user)
+    // };
+    // return fetch(`http://localhost:3000/users/register`, requestOptions).then(handleResponse);
 }
 
 function update(user) {
